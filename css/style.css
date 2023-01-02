@@ -88,16 +88,15 @@ h1 {
     text-align: center;
 }
 
-.card:hover {
-    animation-name: zoomin;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
 
 .card img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+footer {
+    background-color: #ff8c91 ;
 }
 
 /*---*/
@@ -143,10 +142,6 @@ h1 {
         object-fit: cover;
     }
 
-    .card:hover {
-        animation: none;
-    }
-
     .card__texto {
         font-size: 1.1rem;
         margin: 5px 0;
@@ -154,7 +149,7 @@ h1 {
     }
 
     footer {
-        margin: 20px 0;
+        margin: 20px 5px;
     }
 
     .footer_copyright {
@@ -178,19 +173,58 @@ h1 {
 /*---*/
 
 /*TABLET*/
-@media screen and (min-width: 480px){
+@media screen and (min-width: 481px){
     .card {
         width: 30%;
         justify-content: center;
         align-items: flex-start;
         padding: 5px;
-        margin: 5px
+        margin: 10px 15px;
+        max-width: 250px;
     }
     
-    .card:hover {
-        animation: none;
+
+    footer {
+        padding: 20px 5px;
     }
+
+    .footer_copyright {
+        display: flex;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    .footer_redes {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_redes div {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
 
+/*---*/
 
+/*DESKTOP*/
+@media screen and (min-width: 1023px){
+
+    .card {
+        margin: 50px 0px
+    }
+
+    .card:hover {
+        animation-name: zoomin;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+
+    .footer_redes div {
+        width: 25%;
+    }
+
+}
 /*---*/
