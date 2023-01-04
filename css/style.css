@@ -95,6 +95,13 @@ h1 {
     height: 100%;
 }
 
+.libros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
 footer {
     background-color: #ff8c91 ;
 }
@@ -149,7 +156,7 @@ footer {
     }
 
     footer {
-        margin: 20px 5px;
+        padding: 0 10px;
     }
 
     .footer_copyright {
@@ -226,5 +233,9 @@ footer {
         width: 25%;
     }
 
+    h1 {
+        font-size: 3rem;
+        margin: 40px 0;
+    }
 }
 /*---*/
