@@ -11,6 +11,9 @@ body {
     background-color: #ffc4a6;
 }
 
+textarea {
+    resize: none;
+  }
 /*NAV*/
 .navbar {
     background-color: #ff8c91 ; 
@@ -39,12 +42,7 @@ body {
     border-color: #6d165a !important;
 }
 
-.nav_boton:hover {
-    animation-name: zoomin;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    color: #a0346e;
-}
+
 /*---*/
 
 /*MAIN*/
@@ -102,10 +100,57 @@ h1 {
     
 }
 
+.vender, .comentario {
+    display: grid;
+    grid-template-columns: auto minmax(280px, 500px) auto;
+    grid-template-rows: minmax(300px, 500px);
+    grid-template-areas: ". form .";
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.vender form, .comentario form{
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.label_input{
+    font-size: 1.4rem;
+    margin: 15px 0 2px 0;
+    color:#6d165a;
+}
+
+.input__boton {
+    margin: 20px 0;
+    width: 100px;
+    height: 40px;
+    align-self: center;
+    background-color: #a0346e;
+    
+    border: #ffc4a6;
+}
+
+.input__boton:hover {
+    background-color: #ec5c8d;
+    
+}
+
+.comentario__textarea {
+    min-width: 280px;
+    min-height: 150px;
+}
 footer {
     background-color: #ff8c91 ;
 }
 
+.absoluto {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 /*---*/
 
 @keyframes zoomin {
@@ -177,6 +222,19 @@ footer {
     }
 }
 
+.imagen_y_parrafo {
+    display: flex;
+    gap: 10px
+}
+
+.imagen_y_parrafo img {
+    width: 50%;
+}
+
+.imagen_y_parrafo p {
+    width: 50%;
+}
+
 /*---*/
 
 /*TABLET*/
@@ -236,6 +294,13 @@ footer {
     h1 {
         font-size: 3rem;
         margin: 40px 0;
+    }
+
+    .nav_boton:hover {
+        animation-name: zoomin;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        color: #a0346e;
     }
 }
 /*---*/
